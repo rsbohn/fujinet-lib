@@ -1,6 +1,6 @@
 let
   pkgs = import <nixpkgs> {};
-  ver = "2.2.2";
+  ver = builtins.readFile ./version.txt;
 in pkgs.stdenv.mkDerivation {
     pname = "fujinet-lib";
     version = ver;
